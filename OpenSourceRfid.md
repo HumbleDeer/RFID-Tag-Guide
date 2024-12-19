@@ -53,19 +53,23 @@ RFID support can theoretically be added to any printer using off-the-shelf RFID 
 Did you make a design to add RFID to your printer? Let us know so we can link to it here!  Designs can be 3D models, or firmware.
 
 # RFID Hardware
-MiFare 13.56MHZ Classic 1K tags
+*MIFARE Classic EV1 1K* (13.56 MHz) ISO/IEC 14443A-compliant RFID tags 
 
-These are cheap, common, and allow 1kilobyte of data to be stored on them, which is plenty of space to store required information.  13.56Mhz readers are also very low-cost, and there are plenty of arduino-compatible reader/writers to allow user-made printer upgrades to add RFID support.
+These are cheap, common, and allow for 1 KiB (1024 bytes) of data to be stored on them, which is plenty of space to store required information. In addition to that, ISO/IEC 14443A-compliant (13.56 MHz) RFID tag readers are plentiful and very low-cost, with plenty of Arduino-compatible readers/writers available allowing end users to design their own printer upgrades adding RFID tag support.
 
-# Mechanical Requirements
-Requirements are not set in stone.  Still open to discussion. 
+Each spool of filament should have two of these tags, one on each face.
 
-Requirements
-* Tag center should be 56.0mm away from the center of the spool (see pic)
-* The tag should never be more than 4.0mm away from the outside edge of the spool.  For spool sides thicker than 4mm, there must be a cutout to embed the tag, or the tag should be fixed to the outside of the spool
-* Two tags should be used, one on each end of the spool
+# Mechanical Specifications
+The mechanical specifications are not set in stone. They are still subject to change where necessary.
+
+The basic guidelines on the positioning of the RFID tags are fairly simple:
+
+* The tags shall be positioned such that the center of each tag is 56 mm from the center of the spool. (Figure 4.)
+* The tags shall be no more than 4 mm away from the outer surface of the face of the spool. Spools with faces thicker than 4 mm shall have appropriate features (recesses, cutouts, ...) in order to bring the tags within the specified distance. Placing the tags on the outer surfaces of the spool faces
+* Each face of the spool shall have a tag, totalling two tags per spool.
 
 <img src="images/TagLocation.png" width="400">
+<small>Figure 4.</small>
 
 # Data Structure
 
